@@ -1,7 +1,12 @@
+'use strict';
+
 const app = require('express')();
+let port = process.env.PORT || 8080;
 
 app.use(require('./controllers'));
 
-app.listen(3000, () => console.log('App listening on port 3000'));
+app.listen(port, () => {
+  console.log(`App listening on port ${port}`)
+});
 
 module.exports = app;

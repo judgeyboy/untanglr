@@ -7,6 +7,9 @@
     "url": "https://benweber@bitbucket.org/benweber/untanglr.git",
     "type": "git"
   },
+  "scripts": {
+    "start": "node server.js"
+  },
   "author": "Ben Weber <bweber89@gmail.com>",
   "license": "MIT",
   "dependencies": {
