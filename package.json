@@ -1,0 +1,15 @@
+{
+  "name": "untanglr",
+  "version": "0.0.1",
+  "description": "The awesome word untangling mind twisting game",
+  "main": "server.js",
+  "repository": {
+    "url": "https://benweber@bitbucket.org/benweber/untanglr.git",
+    "type": "git"
+  },
+  "author": "Ben Weber <bweber89@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "express": "4.14.0"
+  }
+}
