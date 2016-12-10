@@ -1,17 +1,13 @@
 'use strict';
 
 const express = require('express'),
-      router = express.Router();
+      router = express.Router(),
+      scoresRepository = require('../repositories/scores.repository');
 
 router.get('/', (request, response) => {
-  // todo: load the scores from database via repository
-  let staticScores = [
-    { name: 'Jane', score: 18 },
-    { name: 'John', score: 14 },
-    { name: 'Ben', score: 13 }
-  ];
-
-  response.json(staticScores);
+  scoresRepository.getAllScores()
+    .then(scores => response.json(scores))
+    .catch(error => response.sendStatus(500)); // todo: create middleware to handle errors globally
 });
 
 // todo: implement post to handle new incoming results
